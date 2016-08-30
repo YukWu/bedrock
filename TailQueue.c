@@ -38,6 +38,5 @@ int main(){
 	while(TAILQ_FIRST(&head)){
 		TAILQ_REMOVE(&head,TAILQ_FIRST(&head),elements);
 	}
-	printf("\n");
 	return 0;
 }
