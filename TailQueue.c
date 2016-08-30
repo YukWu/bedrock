@@ -27,6 +27,13 @@ int main(){
 	for(struct element* tp = TAILQ_FIRST(&head);tp!=NULL;tp=TAILQ_NEXT(tp,elements)){
 		printf("%d ",tp->num);
 	}
+	//遍历方法2
+	printf("\n");
+	struct element* tmp;
+	TAILQ_FOREACH(tmp,&head,elements){
+		printf("%d ",tmp->num);
+	}
+	printf("\n");
 	//delete
 	while(TAILQ_FIRST(&head)){
 		TAILQ_REMOVE(&head,TAILQ_FIRST(&head),elements);
